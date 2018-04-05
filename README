@@ -1,0 +1,31 @@
+                                    Computer Networks Asignment 2 - Proxy Server
+
+
+-> Team Members - Samyak Jain (20161083)
+                - Mohit Kuri (20161141)
+
+-> The Proxy Server has been implemented in python language.
+
+-> All the cached files are stored in a folder named Cache which is automatically created when the proxy server is run.
+
+-> To start the proxy server write the commmand "python proxy.py <port_number>" .
+
+-> The proxy server is started at localhost and port number inputted.
+
+-> The main server is running at localhost and port 20000
+
+-> Use the proxy server using curl command "curl -x http://localhost:<port_number> ​ http://127.0.0.1:20000/<file_name>"
+
+-> The data of the file is outputted on terminal.
+
+-> Attached screenshot is of two cases where once file requested is in the server and other case where file does not
+   exist in the server. The responses and corresponding states have been shown.
+
+-> Featres Implemented :
+      - Error handling is done.
+      - Caching is implemented.
+      - No more than 3 files/responses can be cached.
+      - If a new file is requested and the cache is full then the oldest file is removed from cache.
+      - If a file is modified then file gets updated in cache too.
+      - Multiple requests can be handled to the proxy server.
+      - Threading is implemented.
